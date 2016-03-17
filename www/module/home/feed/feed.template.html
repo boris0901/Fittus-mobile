@@ -1,0 +1,44 @@
+<ion-view class="feed-view">
+    <ion-content>
+
+        <div class="list card" ng-repeat="card in cards">
+
+            <div class="item item-avatar">
+                <img ng-src="{{card.avatar}}">
+                <h2 class="title">{{card.title}}</h2>
+                <p class="time">
+                    <i class="icon ion-clock"></i>
+                    {{card.time}}
+                </p>
+                <p class="position">
+                    <i class="icon ion-ios-location"></i>
+                    {{card.position}}
+                </p>
+            </div>
+
+            <div class="item item-body">
+                <img src="{{card.post}}" ng-if="card.post != ''">
+                <p class="description">{{card.description}}</p>
+                <p class="team-description" ng-if="card.team.length>0">With {{card.team_priamry}}<span ng-if="card.team_addition != ''">, and <span class="addition">{{card.team_addition}} others...</span></span></p>
+                <div class="team-avatar" ng-if="card.team.length>0">
+                    <img ng-src="{{member.avatar}}" ng-repeat="member in card.team">
+                </div>
+                <p class="user-action">
+                    <a href="#" class="subdued">
+                        <img src="img/feed-chat-icon.svg">
+                    </a>
+                    <a href="#" class="subdued">
+                        <img src="img/feed-like-icon.svg">
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+    <button class="button button-round button-float" ng-click="showWorkoutModal()" ng-class="{'button-calm': floatButton=='workout-add', 'button-energized': floatButton=='workout-complete'}">
+        <i class="icon" ng-class="{'ion-plus-round': floatButton=='workout-add', 'ion-android-checkbox-outline': floatButton=='workout-complete'}"></i>
+    </button>
+
+</ion-view>

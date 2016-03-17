@@ -1,0 +1,35 @@
+.calendar-view {
+  background-color: $dark;
+
+  .flex-calendar {
+    .month, .week, .days {
+      background-color: transparent;
+    }
+
+    .days {
+      .day {
+        background-color: transparent;
+        border: none;
+
+        &.out {
+          background-color: transparent;
+        }
+
+        &.disabled {
+          .number {
+            background-color: transparent;
+            background-image: none;
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    text-align: center;
+    .button {
+      font-size: 12px;
+    }
+  }
+
+}

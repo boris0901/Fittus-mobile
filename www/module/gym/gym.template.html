@@ -1,0 +1,40 @@
+<ion-view class="gym-view">
+
+    <div class="bar bar-header">
+        <h1 class="title name">Hi Jefferson,</h1>
+        <h1 class="title description">Good to see you! Let's find your gym.</h1>
+    </div>
+
+    <ion-content class="has-header">
+
+        <div class="list">
+            <div class="item">
+                <div class="zipcode">
+                    <span>ZIP CODE</span>
+                    <label class="item item-input icon-right">
+                        <input type="text">
+                        <i class="icon ion-ios-location"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="gym">
+                <ion-checkbox ng-model="selection.gym[$index]" class="item-checkbox" ng-repeat="gym in gyms track by $index" ng-click="changeSelection($index);  $event.stopPropagation();">
+                    <div class="item-gym">
+                        <h2>Planet Fitness</h2>
+                        <p>1010 Tremont street</p>
+                        <p>Boston MA, 02151</p>
+
+                        <p class="distance">.4 mi</p>
+                    </div>
+                </ion-checkbox>
+            </div>
+        </div>
+
+    </ion-content>
+
+    <div class="footer">
+        <button class="button button-full button-calm" ng-click="goNext()">NEXT</button>
+    </div>
+
+</ion-view>

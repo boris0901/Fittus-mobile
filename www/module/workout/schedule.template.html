@@ -1,0 +1,65 @@
+<ion-view class="workout-schedule-view">
+
+    <div class="bar bar-header bar-dark">
+        <button class="button button-clear" ng-click="goBack()">
+            <i class="icon ion-arrow-left-c" ></i>
+        </button>
+        <h1 class="title">Schedule a Workout</h1>
+    </div>
+
+    <ion-content class="has-header has-footer padding">
+
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Enter a name for this workout">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <i class="icon ion-calendar"></i>
+                <span class="input-label">DATE:</span>
+                <input type="date">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <i class="icon ion-clock"></i>
+                <span class="input-label">TIME:</span>
+                <input type="time">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <i class="icon ion-ios-location"></i>
+                <span class="input-label">LOCATION:</span>
+                <input type="text">
+            </label>
+
+            <div class="item item-toggle">
+                Recurring Event
+                <label class="toggle toggle-calm">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <p class="description">This workout will repeat at on the selected days</p>
+        <div class="selected-days">
+            <div class="row">
+                <div class="col">S</div>
+                <div class="col">M</div>
+                <div class="col">T</div>
+                <div class="col selected">W</div>
+                <div class="col">T</div>
+                <div class="col">F</div>
+                <div class="col">S</div>
+            </div>
+        </div>
+
+    </ion-content>
+
+    <div class="bar bar-footer">
+        <button class="button button-clear button-light" ng-click="goNext()">NEXT</button>
+    </div>
+
+</ion-view>

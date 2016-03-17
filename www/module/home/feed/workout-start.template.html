@@ -1,0 +1,52 @@
+<ion-modal-view class="workout-start-view">
+
+    <div class="bar bar-header bar-dark">
+        <button class="button button-clear" ng-click="closeModal('workout-start')">
+            <i class="icon ion-arrow-left-c" ></i>
+        </button>
+        <h1 class="title">Start a Workout</h1>
+    </div>
+
+    <ion-content class="has-header padding">
+
+        <div class="about">
+            <label class="item item-input">
+                <input type="text" placeholder="Say something about your workout">
+            </label>
+        </div>
+
+        <div class="time-location">
+            <div class="row">
+                <div class="col-33">TIME:</div>
+                <div class="col-67">LOCATION:</div>
+            </div>
+            <div class="row">
+                <div class="col-33 time">6:45 PM</div>
+                <div class="col-67 location">Planet Fitness on Tremont</div>
+            </div>
+        </div>
+
+        <div class="additional">
+            <div class="list">
+                <a class="item item-icon-left">
+                    <i class="icon ion-pricetags"></i>
+                    Tag Friends
+                </a>
+                <a class="item item-icon-left">
+                    <i class="icon ion-ios-cloud-upload"></i>
+                    Attach Photo
+                </a>
+                <a class="item item-icon-left">
+                    <i class="icon ion-ios-location"></i>
+                    Change location
+                </a>
+            </div>
+        </div>
+
+    </ion-content>
+
+    <div class="footer">
+        <button class="button button-full button-calm" ng-click="doStartWorkout()">START WORKOUT</button>
+    </div>
+
+</ion-modal-view>

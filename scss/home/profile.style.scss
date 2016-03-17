@@ -1,0 +1,62 @@
+.profile-view {
+  background-color: $dark;
+
+  .avatar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid darkgrey;
+
+    text-align: center;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: $light;
+    }
+  }
+
+  .body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid darkgrey;
+
+    text-align: center;
+    .button-bar {
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    path {
+      fill: $light;
+    }
+    ellipse {
+      stroke: $light;
+    }
+
+    .title {
+      text-align: left;
+      color: $stable;
+    }
+
+    .description {
+      text-align: center;
+      color: $light;
+    }
+  }
+
+  .change {
+    .title {
+      color: $stable;
+    }
+
+    .value {
+      color: $light;
+    }
+  }
+}
